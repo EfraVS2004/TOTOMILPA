@@ -13,43 +13,93 @@
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#pedidos">Pedidos</a>
     </nav>
 
     <!-- Sección Hero -->
     <section id="inicio" class="hero">
         <h1>🌽 TOTOMILPA</h1>
         <p>Totopos Tradicionales 100% | Hechos a mano en Guanajuato</p>
-        <a href="https://wa.me/524731159799" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
-        </a>
     </section>
 
     <!-- Sección de Productos -->
     <section id="productos" class="productos">
         <h2>Nuestros Totopos</h2>
         <div class="producto">
-            <img src="imágenes/Producto.jpg" alt="Totopos en bolsa">
+            <img src="imágenes/Producto.jpg" alt="Totopos Clásicos">
             <h3>Totopos Clásicos</h3>
             <p>$35 por bolsa (250g)</p>
         </div>
         <div class="producto">
-            <img src="imágenes/Producto.jpg" alt="Totopos picantes">
+            <img src="imágenes/Producto.jpg" alt="Totopos Picantes">
             <h3>Totopos Picantes</h3>
             <p>$40 por bolsa (250g)</p>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="contacto">
-        <h2>¿Listo para pedir?</h2>
-        <form action="https://formsubmit.co/22111308@guanajuato.tecnm.mx" method="POST">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo" required>
-            <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
-            <textarea name="pedido" placeholder="Tu pedido (ej.: 2 bolsas de totopos picantes)"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+    <!-- Sección de Pedidos (Mejorada) -->
+    <section id="pedidos" class="pedidos">
+        <h2>¡Haz tu pedido!</h2>
+        <div class="opciones-pedido">
+            <!-- Opción WhatsApp -->
+            <div class="opcion">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>Rápido y directo</p>
+                <a href="https://wa.me/524731159799" class="btn-whatsapp">
+                    Pedir ahora
+                </a>
+            </div>
+            
+            <!-- Opción Correo -->
+            <div class="opcion">
+                <i class="fas fa-envelope"></i>
+                <h3>Correo Electrónico</h3>
+                <p>Para pedidos detallados</p>
+                <button id="abrir-formulario" class="btn-correo">
+                    Enviar correo
+                </button>
+            </div>
+        </div>
+
+        <!-- Formulario flotante profesional -->
+        <div id="formulario-correo" class="formulario-flotante">
+            <span class="cerrar">&times;</span>
+            <h3><i class="fas fa-paper-plane"></i> Formulario de Pedido</h3>
+            <form id="form-pedido" action="https://formsubmit.co/22111308@guanajuato.tecnm.mx" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo Pedido - TOTOMILPA">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre completo*</label>
+                    <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z ]{3,50}" title="Mínimo 3 caracteres (solo letras)">
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="email">Correo electrónico*</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="telefono">Teléfono*</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" title="10 dígitos (ej: 1234567890)">
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="pedido">Detalles del pedido*</label>
+                    <textarea id="pedido" name="pedido" required minlength="10" placeholder="Ej: 2 bolsas de totopos picantes, dirección de entrega..."></textarea>
+                    <span class="error-message"></span>
+                </div>
+                
+                <button type="submit" class="btn-enviar">
+                    <i class="fas fa-paper-plane"></i> Enviar Pedido
+                </button>
+            </form>
+        </div>
     </section>
 
     <!-- Botón "Volver arriba" -->
@@ -63,5 +113,8 @@
             </a>
         </p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
