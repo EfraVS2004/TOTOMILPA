@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTOMILPA - Totopos Artesanales</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <h1>🌽 TOTOMILPA</h1>
+        <p>Totopos Tradicionales 100% | Hechos a mano en Guanajuato</p>
+        <a href="https://wa.me/524731159799" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+        </a>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Totopos</h2>
+        <div class="producto">
+            <img src="imágenes/Producto.jpg" alt="Totopos en bolsa">
+            <h3>Totopos Clásicos</h3>
+            <p>$35 por bolsa (250g)</p>
+        </div>
+        <div class="producto">
+            <img src="imágenes/Producto.jpg" alt="Totopos picantes">
+            <h3>Totopos Picantes</h3>
+            <p>$40 por bolsa (250g)</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>¿Listo para pedir?</h2>
+        <form action="https://formsubmit.co/tucorreo@gmail.com" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo" required>
+            <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+            <textarea name="pedido" placeholder="Tu pedido (ej.: 2 bolsas de totopos picantes)"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Botón "Volver arriba" -->
+    <a href="#inicio" class="btn-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 TOTOMILPA | Tel: 473 165 2911 | 
+            <a href="https://www.instagram.com/toto.milpa?igsh=OWRpN3pwdjR3Zzc3" target="_blank">
+                <i class="fab fa-instagram"></i> @toto.milpa
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
